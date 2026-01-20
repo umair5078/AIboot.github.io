@@ -1,1 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aiboot - Network Packages</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin:0; padding:0; background:#f5f6fa; color:#333; }
+    header { background:#1a73e8; color:white; text-align:center; padding:40px 20px; }
+    header h1 { margin:0; font-size:2.5em; }
+    .container { display:flex; flex-wrap:wrap; justify-content:center; gap:20px; max-width:1100px; margin:40px auto; padding:0 20px; }
+    .network-card { background:white; border-radius:12px; padding:20px; box-shadow:0 4px 10px rgba(0,0,0,0.1); width:300px; transition:0.3s; display:none; }
+    .network-card h2 { color:#1a73e8; margin-bottom:10px; }
+    .package { margin:10px 0; padding:10px; border:1px solid #ddd; border-radius:8px; display:flex; justify-content:space-between; align-items:center; }
+    .package a { padding:6px 12px; background:#1a73e8; color:white; border-radius:6px; text-decoration:none; font-weight:bold; }
+    .package a:hover { background:#155ab6; }
+    select { padding:10px 15px; font-size:1em; margin:20px auto; display:block; border-radius:8px; border:1px solid #ccc; }
+    footer { text-align:center; padding:30px 20px; color:#555; background:#eee; margin-top:50px; }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Network Packages</h1>
+  <p>Select your network to see all packages</p>
+</header>
+
+<select id="networkSelect">
+  <option value="">Select Network</option>
+  <option value="jazz">Jazz</option>
+  <option value="zong">Zong</option>
+  <option value="telenor">Telenor</option>
+  <option value="ufone">Ufone</option>
+  <option value="onic">Onic</option>
+  <option value="rox">Rox</option>
+  <option value="ptcl">PTCL</option>
+</select>
+
+<div class="container">
+
+  <!-- Jazz -->
+  <div class="network-card" data-network="jazz">
+    <h2>📱 Jazz</h2>
+    <div class="package"><span>Daily 100MB</span><a href="tel:*123*1#">Dial</a></div>
+    <div class="package"><span>3 Days 500MB</span><a href="tel:*123*2#">Dial</a></div>
+    <div class="package"><span>Weekly 1GB</span><a href="tel:*123*3#">Dial</a></div>
+    <div class="package"><span>Monthly 5GB</span><a href="tel:*123*4#">Dial</a></div>
+  </div>
+
+  <!-- Zong -->
+  <div class="network-card" data-network="zong">
+    <h2>📱 Zong</h2>
+    <div class="package"><span>Daily 120MB</span><a href="tel:*456*1#">Dial</a></div>
+    <div class="package"><span>3 Days 600MB</span><a href="tel:*456*2#">Dial</a></div>
+    <div class="package"><span>Weekly 1.2GB</span><a href="tel:*456*3#">Dial</a></div>
+    <div class="package"><span>Monthly 6GB</span><a href="tel:*456*4#">Dial</a></div>
+  </div>
+
+  <!-- Telenor -->
+  <div class="network-card" data-network="telenor">
+    <h2>📱 Telenor</h2>
+    <div class="package"><span>Daily 100MB</span><a href="tel:*789*1#">Dial</a></div>
+    <div class="package"><span>3 Days 500MB</span><a href="tel:*789*2#">Dial</a></div>
+    <div class="package"><span>Weekly 1GB</span><a href="tel:*789*3#">Dial</a></div>
+    <div class="package"><span>Monthly 5GB</span><a href="tel:*789*4#">Dial</a></div>
+  </div>
+
+  <!-- Ufone -->
+  <div class="network-card" data-network="ufone">
+    <h2>📱 Ufone</h2>
+    <div class="package"><span>Daily 90MB</span><a href="tel:*321*1#">Dial</a></div>
+    <div class="package"><span>3 Days 450MB</span><a href="tel:*321*2#">Dial</a></div>
+    <div class="package"><span>Weekly 900MB</span><a href="tel:*321*3#">Dial</a></div>
+    <div class="package"><span>Monthly 4GB</span><a href="tel:*321*4#">Dial</a></div>
+  </div>
+
+  <!-- Onic -->
+  <div class="network-card" data-network="onic">
+    <h2>📱 Onic</h2>
+    <div class="package"><span>Daily 100MB</span><a href="tel:*654*1#">Dial</a></div>
+    <div class="package"><span>3 Days 500MB</span><a href="tel:*654*2#">Dial</a></div>
+    <div class="package"><span>Weekly 1GB</span><a href="tel:*654*3#">Dial</a></div>
+    <div class="package"><span>Monthly 5GB</span><a href="tel:*654*4#">Dial</a></div>
+  </div>
+
+  <!-- Rox -->
+  <div class="network-card" data-network="rox">
+    <h2>📱 Rox</h2>
+    <div class="package"><span>Daily 50MB</span><a href="tel:*987*1#">Dial</a></div>
+    <div class="package"><span>3 Days 200MB</span><a href="tel:*987*2#">Dial</a></div>
+    <div class="package"><span>Weekly 500MB</span><a href="tel:*987*3#">Dial</a></div>
+    <div class="package"><span>Monthly 2GB</span><a href="tel:*987*4#">Dial</a></div>
+  </div>
+
+  <!-- PTCL -->
+  <div class="network-card" data-network="ptcl">
+    <h2>📱 PTCL</h2>
+    <div class="package"><span>Daily 100MB</span><a href="tel:*111*1#">Dial</a></div>
+    <div class="package"><span>3 Days 500MB</span><a href="tel:*111*2#">Dial</a></div>
+    <div class="package"><span>Weekly 1GB</span><a href="tel:*111*3#">Dial</a></div>
+    <div class="package"><span>Monthly 5GB</span><a href="tel:*111*4#">Dial</a></div>
+  </div>
+
+</div>
+
+<footer>
+  &copy; 2026 Aiboot. All rights reserved.
+</footer>
+
+<script>
+const select = document.getElementById('networkSelect');
+const cards = document.querySelectorAll('.network-card');
+
+// Show selected network packages
+select.addEventListener('change', () => {
+  const val = select.value;
+  cards.forEach(card => {
+    card.style.display = (val === '' || card.dataset.network === val) ? 'block' : 'none';
+  });
+});
+</script>
+
+</body>
+</html>
 
